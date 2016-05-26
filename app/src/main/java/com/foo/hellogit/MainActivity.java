@@ -5,6 +5,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -19,7 +22,19 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, "haha", Toast.LENGTH_SHORT).show();
             }
         });
-        
+
+
+        getData();
+
+    }
+
+    List<String> mData;
+    public void getData() {
+        mData = new ArrayList<>();
+        for (int i = 0; i < 100; i++) {
+            mData.add("list " + i);
+        }
+
 
     }
 }
